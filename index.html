@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crypto Exchange Rates</title>
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <!-- Site CSS -->
+        <link rel="stylesheet" href="./assets/css/styles.css">
+    </head>
+    <body class="container bg-light">
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand navbar-light bg-warning fixed-top">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">Cyrpto Exchange Rates</a>
+                <form class="d-flex">
+                    <button id="convert-coin" class="btn btn-outline-danger me-3" type="button" data-bs-toggle="modal" data-bs-target="#convert-coin-modal">Convert a Coin</button>
+                    <input id="search" type="search" class="form-control me-2" placeholder="Search">
+                </form>
+            </div>
+            <!-- Navbar Search & Convert -->
+            
+        </nav>
+        <!-- Coin Rates table -->
+        <div class="table-responsive text-center" style="margin-top: 83px;">
+            <table class="table caption-top table-sm table-hover table-striped table-bordered table-secondary">
+                <caption>API provided by <a href="https://coinlayer.com/" target="_blank">coinlayer</a></caption>
+                <thead class="table-dark">
+                    <tr>
+                        <th>Coin Icon</th>
+                        <th>Coin Symbol</th>
+                        <th>Coin Name</th>
+                        <th>Coin Exchange Rate</th>
+                        <th>High / Low</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- List of crypto coins -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Convert a coin modal. Always hidden but only made visiable when the Convert a Coin button is clicked -->
+        <div class="modal fade" id="convert-coin-modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Amount of coin to convert -->
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="coin-amount" placeholder="Coin Amount">
+                            <label for="coin-amount">Enter amount of coin to convert</label>
+                        </div>
+                        <!-- Coin to be converted from -->
+                        <div class="form-floating mb-3">
+                            <select name="from-coin" id="from-coin" class="form-control form-select me-2">
+                                <!-- Coin Sybmol List -->
+                             </select>
+                             <label for="form-coin">Type of coin entered</label>
+                        </div>
+                        <!-- Coin to be converted too -->
+                        <div class="form-floating mb-3">
+                            <select name="to-coin" id="to-coin" class="form-control form-select">
+                                <!-- Coin Sybmol List -->
+                            </select>
+                            <label for="to-coin">Coin to be converted to</label>
+                        </div>
+                        <!-- Coin conversion result -->
+                        <h4 class="form-label text-center" id="covert-result"></h4>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="convert-submit">Convert Coin</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        <!-- Site JS -->
+        <script src="./assets/scripts/script.js"></script>
+    </body>
+</html>
